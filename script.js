@@ -25,7 +25,7 @@ const projects = [
     description:"A connected power monitoring and isolation concept with live electrical measurements, relay control and protection logic.",
     detail:"The project direction combines voltage/current sensing, multi-channel control, fault logging and a responsive dashboard for electrical visibility. It grew from practical PZEM/ZMPT/ACS712 bench work into a more structured protection-oriented interface.",
     stack:["ESP32","PZEM004T","ZMPT101B","ACS712","Relays"],
-    repo:"https://github.com/Turkson225/smart-circuit-isolator-dashboard", live:"#", accent:"orange"
+    repo:"https://github.com/Turkson225/smart-circuit-isolator-dashboard", live:null, accent:"orange"
   },
   {
     id:"gas", title:"ESP32 Gas Detector", category:"iot", label:"Safety / IoT", year:"2026",
@@ -39,7 +39,7 @@ const projects = [
     description:"Several iterations of networked relay control experiments used to validate appliance automation and remote switching.",
     detail:"These repos capture the iterative engineering path behind connected actuator control: basic relay switching, improved channel handling and dashboard-friendly control patterns.",
     stack:["ESP32","Relays","Wi-Fi","Web UI"],
-    repo:"https://github.com/Turkson225/ESP32RelayControl-0.3", live:"#", accent:"lime"
+    repo:"https://github.com/Turkson225/ESP32RelayControl-0.3", live:null, accent:"lime"
   },
   {
     id:"robotics", title:"Turk Robotics", category:"robotics", label:"Robotics", year:"2026",
@@ -53,7 +53,7 @@ const projects = [
     description:"A technology brand platform connecting engineering work, products, services, stories and investor-facing communication.",
     detail:"This platform acts as the presentation layer for the wider engineering practice: product narratives, portfolio material, applications, reviews and a visual language designed to make technical work approachable.",
     stack:["React","Vite","Tailwind","Supabase","Web"],
-    repo:"https://github.com/Turkson225/turk-innovation", live:"#", accent:"cyan"
+    repo:"https://github.com/Turkson225/turk-innovation", live:null, accent:"cyan"
   },
   {
     id:"club", title:"InnovateX Engineering Club", category:"web", label:"Platform / Community", year:"2026",
@@ -96,7 +96,7 @@ function render(list=projects){
         <h3>${p.title}</h3>
         <p>${p.description}</p>
         <div class="tag-row">${p.stack.map(t=>`<span class="tech-tag">${t}</span>`).join("")}</div>
-        <div class="card-footer"><span>VIEW SYSTEM</span><span>↗</span></div>
+        <div class="card-footer"><span>VIEW CASE STUDY</span><span>↗</span></div>
       </div>
     </article>`).join("");
   observeReveal();
@@ -120,7 +120,7 @@ grid.addEventListener("click", e=>{
     <div class="dialog-specs">
       <div class="dialog-spec"><small>SCOPE</small><strong>${p.label}</strong></div>
       <div class="dialog-spec"><small>STACK</small><strong>${p.stack.slice(0,3).join(" · ")}</strong></div>
-      <div class="dialog-spec"><small>REPOSITORY</small><strong>TURKSON225</strong></div>
+      <div class="dialog-spec"><small>SOURCE</small><strong>GitHub repository</strong></div>
     </div>
     <div class="dialog-actions">
       <a class="btn btn-primary" href="${p.repo}" target="_blank" rel="noreferrer">Open GitHub ↗</a>
