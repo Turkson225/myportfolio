@@ -3,294 +3,311 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Ennis Turkson — Embedded Systems, IoT & Control Engineering</title>
-  <meta name="description" content="Engineering portfolio of Ennis Turkson: embedded systems, IoT, control systems, flight telemetry, intelligent dashboards and real-world prototypes.">
+  <title>Ennis Turkson — Embedded Systems & IoT Engineer</title>
+  <meta name="description" content="Engineering portfolio of Ennis Turkson — embedded systems, IoT, control systems, flight telemetry and intelligent engineering platforms.">
   <meta name="author" content="Ennis Turkson">
-  <meta name="theme-color" content="#070a0d">
+  <meta name="theme-color" content="#171d26">
   <meta property="og:title" content="Ennis Turkson — Engineering Portfolio">
-  <meta property="og:description" content="Embedded systems, IoT, control systems, flight telemetry and intelligent engineering platforms.">
+  <meta property="og:description" content="Embedded systems, IoT, control systems, flight telemetry and engineering dashboards.">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://turkson225.github.io/turk-robotics-website/">
-  <meta property="og:image" content="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg">
-  <meta name="twitter:card" content="summary_large_image">
+  <meta property="og:image" content="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/brand/ennis-turkson-founder.jpg">
   <link rel="canonical" href="https://turkson225.github.io/turk-robotics-website/">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preconnect" href="https://raw.githubusercontent.com">
-  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="./styles.css">
-  <script type="application/ld+json">
-  {
-    "@context":"https://schema.org",
-    "@type":"Person",
-    "name":"Ennis Turkson",
-    "url":"https://turkson225.github.io/turk-robotics-website/",
-    "sameAs":["https://github.com/Turkson225"],
-    "jobTitle":"Embedded Systems and IoT Engineer",
-    "knowsAbout":["Embedded systems","IoT","Control systems","Robotics","Flight telemetry","ESP32","Arduino","Firebase","Supabase"]
-  }
-  </script>
 </head>
 <body>
-  <div class="noise" aria-hidden="true"></div>
-  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
-
-  <header class="site-header">
-    <a class="brand" href="#top" aria-label="Ennis Turkson home">
-      <span class="brand-mark"><span></span><span></span><span></span></span>
-      <span>ENNIS / TURKSON</span>
-    </a>
-    <nav class="nav" id="nav" aria-label="Primary navigation">
+  <header class="topbar">
+    <a class="logo" href="#home">Ennis <span>Turkson</span></a>
+    <nav class="nav" id="nav">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#services">Expertise</a>
       <a href="#projects">Projects</a>
-      <a href="#technology">Technology</a>
-      <a href="#process">Process</a>
-      <a href="#lab">Lab</a>
-      <a href="#skills">Skills</a>
-      <a href="#timeline">Timeline</a>
       <a href="#contact">Contact</a>
     </nav>
-    <button class="menu-btn" id="menuBtn" aria-label="Open navigation" aria-expanded="false"><i></i><i></i></button>
+    <button class="menu-button" id="menuButton" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span>
+    </button>
   </header>
 
-  <main id="top">
-    <section class="hero section">
-      <div class="hero-copy reveal">
-        <p class="eyebrow"><span class="pulse"></span> EMBEDDED SYSTEMS · IOT · CONTROL · FLIGHT SYSTEMS</p>
-        <h1>Engineering intelligent systems <em>from hardware to cloud.</em></h1>
-        <p class="hero-lede">I design connected engineering systems that move from sensors and firmware to telemetry, cloud services, dashboards and operator decisions.</p>
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-copy">
+        <p class="hero-kicker">Hello, <span>I’m</span></p>
+        <h1>Ennis Turkson</h1>
+        <h2>Embedded Systems & IoT Engineer</h2>
+        <p class="hero-text">I build intelligent systems that connect hardware, firmware, communication, cloud services and operator dashboards into one practical engineering solution.</p>
+
         <div class="hero-actions">
-          <a class="btn btn-primary" href="#projects">Explore projects <span>↗</span></a>
-          <a class="btn btn-ghost" href="#contact">Work with me</a>
+          <a class="primary-button" href="#projects">See Projects</a>
+          <a class="text-button" href="#contact">Let’s Talk <span>↗</span></a>
         </div>
-        <div class="hero-meta">
-          <span>Embedded systems</span><span>IoT</span><span>Control</span><span>Product interfaces</span>
+
+        <div class="hero-switch">
+          <a class="active" href="#about">Information</a>
+          <a href="#projects">Projects</a>
+        </div>
+
+        <div class="social-row">
+          <a href="https://github.com/Turkson225" target="_blank" rel="noreferrer" aria-label="GitHub">GH</a>
+          <a href="mailto:ennisturkson98@gmail.com" aria-label="Email">@</a>
+          <span class="social-placeholder" title="LinkedIn can be added later">in</span>
         </div>
       </div>
 
-      <div class="hero-visual reveal delay-1">
-        <div class="portrait-shell">
-          <img
-            src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/brand/ennis-turkson-founder.jpg"
-            alt="Ennis Turkson"
-            width="720"
-            height="900"
-            decoding="async"
-            fetchpriority="high">
-          <div class="portrait-overlay">
-            <span class="mono">ENNIS TURKSON</span>
-            <strong>Engineer / Builder</strong>
+      <div class="hero-photo-wrap">
+        <div class="hero-hex"></div>
+        <img
+          class="hero-photo"
+          src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/brand/ennis-turkson-founder.jpg"
+          alt="Ennis Turkson"
+          width="760"
+          height="900"
+          fetchpriority="high">
+        <div class="hero-chip">Hardware → Cloud</div>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="services">
+      <div class="section-title center-title">
+        <p>My <span>Engineering Focus</span></p>
+        <h2>What I Do</h2>
+      </div>
+
+      <div class="services-grid">
+        <article class="service-card">
+          <div class="service-icon">MCU</div>
+          <h3>Embedded Systems</h3>
+          <p>Microcontroller firmware, sensors, actuators, UART/I²C/SPI communication, state logic, testing and hardware integration.</p>
+        </article>
+        <article class="service-card featured-service">
+          <div class="service-icon">IoT</div>
+          <h3>IoT & Cloud</h3>
+          <p>Connected devices, Firebase and Supabase backends, remote telemetry, notifications, logging and control dashboards.</p>
+        </article>
+        <article class="service-card">
+          <div class="service-icon">CTL</div>
+          <h3>Control & Flight Systems</h3>
+          <p>Telemetry, radio links, IMU/GPS integration, control-system interfaces, flight dashboards, mission planning and failsafe design.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section skills-section">
+      <div class="skills-intro">
+        <p class="mini-label">Favorite <span>Skills</span></p>
+        <h2>My Skills</h2>
+        <p>Capabilities developed through hands-on engineering builds, iteration, troubleshooting and full-system integration.</p>
+        <a class="primary-button" href="#projects">See Projects</a>
+      </div>
+
+      <div class="skills-list">
+        <div class="skill-item"><span>01.</span><strong>Embedded Systems</strong><em>95%</em></div>
+        <div class="skill-item"><span>02.</span><strong>IoT Systems</strong><em>95%</em></div>
+        <div class="skill-item"><span>03.</span><strong>Electronics</strong><em>92%</em></div>
+        <div class="skill-item"><span>04.</span><strong>Web Dashboards</strong><em>90%</em></div>
+        <div class="skill-item"><span>05.</span><strong>Control Systems</strong><em>90%</em></div>
+        <div class="skill-item"><span>06.</span><strong>Robotics</strong><em>88%</em></div>
+      </div>
+    </section>
+
+    <section class="section profile-section" id="about">
+      <div class="resume-card">
+        <div class="resume-top">
+          <div>
+            <p class="hello-line">Hello I’m</p>
+            <h2>Ennis Turkson</h2>
+            <div class="resume-tabs">
+              <button class="tab-button active" data-tab="info">Information</button>
+              <button class="tab-button" data-tab="projects">Projects</button>
+            </div>
           </div>
-          <div class="portrait-status"><span></span> BUILDING / TESTING / ITERATING</div>
+          <div class="resume-photo-frame">
+            <img src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/brand/ennis-turkson-founder.jpg" alt="Ennis Turkson profile">
+          </div>
+        </div>
+
+        <div class="tab-panel active" id="tab-info">
+          <div class="profile-block">
+            <span class="lime-label">Profile</span>
+            <p>I work across embedded hardware, IoT, control systems and engineering software. My projects are built as complete systems—from sensors and microcontrollers through communication and cloud services to dashboards, testing and documentation.</p>
+          </div>
+
+          <div class="resume-columns">
+            <div>
+              <span class="lime-label">Skills</span>
+              <ul class="clean-list">
+                <li>Embedded firmware & hardware integration</li>
+                <li>IoT architecture and telemetry</li>
+                <li>Control systems & flight-system interfaces</li>
+                <li>Engineering dashboard design</li>
+                <li>System testing and troubleshooting</li>
+                <li>Technical documentation</li>
+              </ul>
+
+              <span class="lime-label lower-label">Tools & Technologies</span>
+              <div class="tool-cloud">
+                <span>ESP32</span><span>Arduino</span><span>STM32</span><span>Firebase</span><span>Supabase</span><span>nRF24</span><span>UART</span><span>I²C</span><span>SPI</span><span>React</span><span>JavaScript</span>
+              </div>
+            </div>
+
+            <div class="experience-column">
+              <span class="lime-label">Experience</span>
+              <div class="experience-row">
+                <div class="experience-date">2025 /<br>Present</div>
+                <div><h3>Embedded & IoT Engineering</h3><p>Designing practical connected systems for security, energy monitoring, automation, telemetry and engineering operations.</p></div>
+              </div>
+              <div class="experience-row">
+                <div class="experience-date">2026 /<br>Present</div>
+                <div><h3>Flight & Control Systems</h3><p>Developing radio telemetry, UART links, mission-planning interfaces, sensor integration and onboard-first control architectures.</p></div>
+              </div>
+              <div class="experience-row">
+                <div class="experience-date">2026 /<br>Present</div>
+                <div><h3>Engineering Platforms</h3><p>Building technical web platforms for monitoring, collaboration, engineering education and product communication.</p></div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="tab-panel" id="tab-projects">
+          <p class="tab-intro">Eight selected projects represent the strongest work across embedded systems, IoT, flight systems, power monitoring and engineering platforms.</p>
+          <div class="mini-project-grid" id="miniProjectGrid"></div>
+          <a class="resume-project-link" href="#projects">Open full project portfolio ↘</a>
         </div>
       </div>
     </section>
 
-    <section class="stats-bar" aria-label="Portfolio statistics">
-      <div class="stats-wrap">
-        <div><strong>08</strong><span>Flagship projects</span></div>
-        <div><strong>04</strong><span>Engineering domains</span></div>
-        <div><strong>HW→UI</strong><span>End-to-end systems</span></div>
-        <div><strong>2025→</strong><span>Build timeline</span></div>
+    <section class="section technology-section">
+      <div class="section-title">
+        <p>Engineering <span>Stack</span></p>
+        <h2>Tools & Technologies</h2>
+      </div>
+      <div class="technology-groups">
+        <article>
+          <span>01 / Embedded</span>
+          <h3>ESP32 · Arduino · STM32 · Sensors</h3>
+        </article>
+        <article>
+          <span>02 / Communication</span>
+          <h3>Wi-Fi · Bluetooth · GSM · nRF24 · UART · I²C · SPI</h3>
+        </article>
+        <article>
+          <span>03 / Cloud</span>
+          <h3>Firebase · Supabase · Google APIs · Apps Script</h3>
+        </article>
+        <article>
+          <span>04 / Interfaces</span>
+          <h3>React · HTML · CSS · JavaScript · Telemetry UI</h3>
+        </article>
+        <article>
+          <span>05 / Control</span>
+          <h3>PID · Telemetry · Robotics · Flight Systems · Failsafe Logic</h3>
+        </article>
+      </div>
+    </section>
+
+    <section class="section process-section">
+      <div class="section-title center-title">
+        <p>My <span>Workflow</span></p>
+        <h2>Engineering Process</h2>
+      </div>
+      <div class="process-line">
+        <div><b>01</b><span>Idea</span></div>
+        <div><b>02</b><span>Research</span></div>
+        <div><b>03</b><span>Simulation</span></div>
+        <div><b>04</b><span>Hardware</span></div>
+        <div><b>05</b><span>Firmware</span></div>
+        <div><b>06</b><span>Dashboard</span></div>
+        <div><b>07</b><span>Testing</span></div>
+        <div><b>08</b><span>Documentation</span></div>
+        <div><b>09</b><span>Deployment</span></div>
       </div>
     </section>
 
     <section class="section projects-section" id="projects">
-      <div class="section-head reveal">
-        <div>
-          <p class="eyebrow">SELECTED ENGINEERING WORK</p>
-          <h2>Systems with a <em>story, architecture and result.</em></h2>
-        </div>
-        <p class="section-intro">The portfolio is organized around projects I built and developed—not repository names. Each system connects real hardware, software and engineering decisions.</p>
-      </div>
-
-      <div class="subhead-row reveal">
-        <div>
-          <span class="section-number">01</span>
-          <h3>Featured systems</h3>
-        </div>
-        <p>Four projects that best represent my end-to-end engineering work.</p>
-      </div>
-      <div class="featured-grid" id="featuredGrid"></div>
-
-      <div class="subhead-row reveal more-projects-head">
-        <div>
-          <span class="section-number">02</span>
-          <h3>More engineering projects</h3>
-        </div>
-        <p>Focused systems across safety, automation, flight telemetry and technology platforms.</p>
+      <div class="section-title">
+        <p>Selected <span>Engineering Work</span></p>
+        <h2>Projects</h2>
       </div>
       <div class="project-grid" id="projectGrid"></div>
     </section>
 
-    <section class="section technology-section" id="technology">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">TECHNOLOGY</p><h2>One stack, from <em>silicon to interface.</em></h2></div>
-        <p class="section-intro">Tools are grouped by the part of the system they serve. The emphasis is on integration, not collecting logos.</p>
+    <section class="section lab-section">
+      <div class="section-title">
+        <p>Development <span>Evidence</span></p>
+        <h2>Laboratory Gallery</h2>
       </div>
-      <div class="technology-grid reveal" id="technologyGrid">
-        <article class="tech-cluster">
-          <span class="tech-index">01 / EMBEDDED</span>
-          <h3>Compute & sensing</h3>
-          <div class="tech-chips">
-            <span>ESP32</span><span>Arduino</span><span>STM32</span><span>Sensors</span>
-          </div>
-        </article>
-        <article class="tech-cluster">
-          <span class="tech-index">02 / COMMUNICATION</span>
-          <h3>Links & protocols</h3>
-          <div class="tech-chips">
-            <span>Wi-Fi</span><span>Bluetooth</span><span>GSM</span><span>nRF24</span><span>UART</span><span>I²C</span><span>SPI</span>
-          </div>
-        </article>
-        <article class="tech-cluster">
-          <span class="tech-index">03 / CLOUD</span>
-          <h3>Data & services</h3>
-          <div class="tech-chips">
-            <span>Firebase</span><span>Supabase</span><span>Google APIs</span><span>Apps Script</span>
-          </div>
-        </article>
-        <article class="tech-cluster">
-          <span class="tech-index">04 / DASHBOARDS</span>
-          <h3>Operator interfaces</h3>
-          <div class="tech-chips">
-            <span>React</span><span>HTML</span><span>CSS</span><span>JavaScript</span><span>Telemetry UI</span>
-          </div>
-        </article>
-        <article class="tech-cluster tech-cluster-wide">
-          <span class="tech-index">05 / CONTROL</span>
-          <h3>Systems thinking</h3>
-          <div class="tech-chips">
-            <span>PID</span><span>Telemetry</span><span>Robotics</span><span>Flight systems</span><span>Failsafe logic</span><span>State machines</span>
-          </div>
-        </article>
-      </div>
-    </section>
-
-    <section class="section process-section" id="process">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">ENGINEERING PROCESS</p><h2>From a rough idea to a <em>testable system.</em></h2></div>
-        <p class="section-intro">The process is iterative. Findings from testing often loop back into hardware, firmware and interface decisions.</p>
-      </div>
-      <div class="process-track reveal" aria-label="Engineering process timeline">
-        <div class="process-step"><b>01</b><strong>Idea</strong><span>Define the problem and intended user.</span></div>
-        <div class="process-step"><b>02</b><strong>Research</strong><span>Study constraints, components and system risks.</span></div>
-        <div class="process-step"><b>03</b><strong>Simulation</strong><span>Validate logic and architecture before hardware.</span></div>
-        <div class="process-step"><b>04</b><strong>Hardware</strong><span>Wire, assemble and establish power integrity.</span></div>
-        <div class="process-step"><b>05</b><strong>Firmware</strong><span>Implement sensing, state logic and communication.</span></div>
-        <div class="process-step"><b>06</b><strong>Dashboard</strong><span>Turn telemetry into useful operator information.</span></div>
-        <div class="process-step"><b>07</b><strong>Testing</strong><span>Exercise normal, edge and failure scenarios.</span></div>
-        <div class="process-step"><b>08</b><strong>Documentation</strong><span>Capture architecture, results and operation.</span></div>
-        <div class="process-step"><b>09</b><strong>Deployment</strong><span>Publish, demonstrate and prepare the next revision.</span></div>
-      </div>
-    </section>
-
-    <section class="section lab-section" id="lab">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">LABORATORY / EVIDENCE</p><h2>Real builds. Real interfaces. <em>Real iteration.</em></h2></div>
-        <p class="section-intro">This gallery uses project evidence already captured during development—hardware, prototypes, enclosures and dashboards rather than stock photography.</p>
-      </div>
-      <div class="lab-grid reveal">
-        <figure class="lab-item lab-large">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/bench-assembly.jpg" alt="Electronics bench assembly">
-          <figcaption><span>BENCH / BUILD</span><strong>Prototype assembly</strong></figcaption>
+      <div class="lab-grid">
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/bench-assembly.jpg" alt="Prototype bench assembly">
+          <figcaption>Prototype assembly</figcaption>
         </figure>
-        <figure class="lab-item">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg" alt="SmartGuard security dashboard">
-          <figcaption><span>SMARTGUARD</span><strong>Security interface</strong></figcaption>
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg" alt="SmartGuard dashboard">
+          <figcaption>SmartGuard interface</figcaption>
         </figure>
-        <figure class="lab-item">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/fixed-wing-drone-prototype.jpg" alt="Fixed wing drone prototype">
-          <figcaption><span>FLIGHT SYSTEMS</span><strong>Fixed-wing prototype</strong></figcaption>
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/fixed-wing-drone-prototype.jpg" alt="Fixed wing drone">
+          <figcaption>Fixed-wing prototype</figcaption>
         </figure>
-        <figure class="lab-item">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smart-power-dashboard.jpg" alt="Electrical power monitoring dashboard">
-          <figcaption><span>POWER SYSTEMS</span><strong>Live telemetry</strong></figcaption>
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smart-power-dashboard.jpg" alt="Power monitoring dashboard">
+          <figcaption>Power telemetry</figcaption>
         </figure>
-        <figure class="lab-item lab-wide">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/gassafe-internal-layout.jpg" alt="Gas detector internal layout">
-          <figcaption><span>GASSAFE</span><strong>Internal electronics layout</strong></figcaption>
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/gassafe-internal-layout.jpg" alt="Gas detector internals">
+          <figcaption>Gas detector internals</figcaption>
         </figure>
-        <figure class="lab-item">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/mobile-relay-dashboard.jpg" alt="Mobile relay control dashboard">
-          <figcaption><span>AUTOMATION</span><strong>Relay control UI</strong></figcaption>
-        </figure>
-        <figure class="lab-item">
-          <img loading="lazy" decoding="async" src="https://raw.githubusercontent.com/Turkson225/Turk-Innovation-CLUB/main/assets/engineering-lab.webp" alt="Engineering club laboratory">
-          <figcaption><span>INNOVATEX</span><strong>Engineering lab</strong></figcaption>
+        <figure>
+          <img loading="lazy" src="https://raw.githubusercontent.com/Turkson225/Turk-Innovation-CLUB/main/assets/engineering-lab.webp" alt="Engineering lab">
+          <figcaption>Engineering lab</figcaption>
         </figure>
       </div>
     </section>
 
-    <section class="section skills-section" id="skills">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">SKILLS</p><h2>Capabilities developed through <em>building.</em></h2></div>
-        <p class="section-intro">These percentages are portfolio self-assessments, shown as an interface device rather than formal certifications.</p>
+    <section class="section timeline-section">
+      <div class="section-title">
+        <p>Build <span>Timeline</span></p>
+        <h2>Engineering Journey</h2>
       </div>
-      <div class="skills-grid reveal">
-        <article class="skill-card" data-skill="95"><div class="skill-ring"><span>95%</span></div><h3>Embedded Systems</h3><p>Microcontrollers, sensing, state logic and hardware integration.</p></article>
-        <article class="skill-card" data-skill="95"><div class="skill-ring"><span>95%</span></div><h3>IoT</h3><p>Device-to-cloud communication, remote state and connected monitoring.</p></article>
-        <article class="skill-card" data-skill="92"><div class="skill-ring"><span>92%</span></div><h3>Electronics</h3><p>Prototyping, power, relay systems, sensors and integration testing.</p></article>
-        <article class="skill-card" data-skill="90"><div class="skill-ring"><span>90%</span></div><h3>Web Dashboards</h3><p>Telemetry, responsive UI, visualization and operator workflows.</p></article>
-        <article class="skill-card" data-skill="88"><div class="skill-ring"><span>88%</span></div><h3>Robotics</h3><p>Mobile platforms, embedded control and sensor-driven behaviour.</p></article>
-        <article class="skill-card" data-skill="90"><div class="skill-ring"><span>90%</span></div><h3>Control Systems</h3><p>Feedback thinking, modes, failsafes, telemetry and PID foundations.</p></article>
-      </div>
-    </section>
-
-    <section class="section timeline-section" id="timeline">
-      <div class="section-head reveal">
-        <div><p class="eyebrow">BUILD TIMELINE</p><h2>A growing body of <em>engineering work.</em></h2></div>
-      </div>
-      <div class="career-line reveal">
-        <article><time>2025</time><div><span>START</span><h3>Embedded Systems</h3><p>Building practical microcontroller, electronics and connected-device foundations.</p></div></article>
-        <article><time>2025–26</time><div><span>SECURITY</span><h3>SmartGuard</h3><p>AI-assisted recognition, GSM alerts, cloud evidence and remote monitoring.</p></div></article>
-        <article><time>2026</time><div><span>ENERGY</span><h3>Power Monitoring</h3><p>Electrical telemetry, load monitoring, relay control and protection-oriented interfaces.</p></div></article>
-        <article><time>2026</time><div><span>FLIGHT / 01</span><h3>Flight Deck</h3><p>nRF24 radio telemetry, UART bridging, IMU data and ground-station visualization.</p></div></article>
-        <article><time>2026</time><div><span>FLIGHT / 02</span><h3>Flight Command Center</h3><p>Mission planning, flight analysis, navigation interfaces and safer system architecture.</p></div></article>
-        <article><time>2026</time><div><span>PLATFORM</span><h3>InnovateX</h3><p>A role-aware engineering community platform for learning, projects and collaboration.</p></div></article>
-      </div>
-    </section>
-
-    <section class="section about-section" id="about">
-      <div class="about-copy reveal">
-        <p class="eyebrow">ABOUT</p>
-        <h2>I work across the boundary between <em>physical systems and software.</em></h2>
-        <p>I approach projects as complete systems: power and sensors, firmware and communication, databases and dashboards, testing and documentation. That makes the final result easier to operate, explain and improve.</p>
-      </div>
-      <div class="principles reveal delay-1">
-        <div><span>01</span><strong>Build for a real problem.</strong></div>
-        <div><span>02</span><strong>Make system state observable.</strong></div>
-        <div><span>03</span><strong>Design failure behaviour early.</strong></div>
-        <div><span>04</span><strong>Document what was actually tested.</strong></div>
+      <div class="timeline">
+        <article><time>2025</time><div><h3>Started Embedded Systems</h3><p>Microcontrollers, sensors, electronics and practical prototypes.</p></div></article>
+        <article><time>2025–26</time><div><h3>SmartGuard</h3><p>AI-assisted recognition, GSM alerts, cloud evidence and remote security monitoring.</p></div></article>
+        <article><time>2026</time><div><h3>Power Monitoring</h3><p>Electrical telemetry, relay control and protection-oriented interfaces.</p></div></article>
+        <article><time>2026</time><div><h3>Flight Deck</h3><p>Radio telemetry, UART communication, IMU data and a browser ground station.</p></div></article>
+        <article><time>2026</time><div><h3>Flight Command Center</h3><p>Mission planning, flight analysis, navigation and safer control architecture.</p></div></article>
+        <article><time>2026</time><div><h3>InnovateX</h3><p>A complete engineering education and collaboration platform.</p></div></article>
       </div>
     </section>
 
     <section class="section contact-section" id="contact">
-      <div class="contact-card reveal">
-        <div>
-          <p class="eyebrow">CONTACT</p>
-          <h2>Need an engineering system <em>designed, prototyped or visualized?</em></h2>
-          <p>Available for embedded systems, IoT prototypes, engineering dashboards, control-system interfaces and collaborative technical projects.</p>
-        </div>
-        <div class="contact-links">
-          <a href="mailto:ennisturkson98@gmail.com"><span>EMAIL</span><strong>ennisturkson98@gmail.com</strong><b>↗</b></a>
-          <a href="https://github.com/Turkson225" target="_blank" rel="noreferrer"><span>GITHUB</span><strong>github.com/Turkson225</strong><b>↗</b></a>
-          <div><span>LOCATION</span><strong>Accra, Ghana</strong><b>•</b></div>
-          <div><span>LINKEDIN</span><strong>Profile to be added</strong><b>—</b></div>
-          <a href="mailto:ennisturkson98@gmail.com?subject=Resume%20Request"><span>RESUME</span><strong>Request résumé</strong><b>↗</b></a>
-        </div>
+      <div class="contact-copy">
+        <p class="mini-label">Professional <span>Contact</span></p>
+        <h2>Have a system you want to build?</h2>
+        <p>For embedded systems, IoT prototypes, engineering dashboards, automation and control-system projects, send me a message.</p>
+      </div>
+      <div class="contact-list">
+        <a href="mailto:ennisturkson98@gmail.com"><span>Email</span><strong>ennisturkson98@gmail.com</strong><b>↗</b></a>
+        <a href="https://github.com/Turkson225" target="_blank" rel="noreferrer"><span>GitHub</span><strong>github.com/Turkson225</strong><b>↗</b></a>
+        <div><span>Location</span><strong>Accra, Ghana</strong><b>•</b></div>
+        <div><span>LinkedIn</span><strong>To be added</strong><b>—</b></div>
+        <a href="mailto:ennisturkson98@gmail.com?subject=Resume%20Request"><span>Resume</span><strong>Request résumé</strong><b>↗</b></a>
       </div>
     </section>
   </main>
 
-  <footer class="footer">
+  <footer>
     <span>© 2026 Ennis Turkson</span>
-    <span class="mono">HARDWARE → FIRMWARE → CLOUD → INTERFACE</span>
-    <a href="#top">Back to top ↑</a>
+    <span>Embedded Systems · IoT · Control</span>
+    <a href="#home">Back to top ↑</a>
   </footer>
 
-  <dialog id="projectDialog" class="project-dialog">
-    <div class="dialog-shell">
-      <button class="dialog-close" id="dialogClose" aria-label="Close project details">×</button>
+  <dialog class="project-dialog" id="projectDialog">
+    <div class="dialog-card">
+      <button class="dialog-close" id="dialogClose" aria-label="Close">×</button>
       <div id="dialogBody"></div>
     </div>
   </dialog>
