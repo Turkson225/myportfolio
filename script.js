@@ -76,25 +76,3 @@ document.querySelectorAll('a[href^="#"]').forEach(a=>a.addEventListener("click",
   e.preventDefault();
   target.scrollIntoView({behavior:"smooth",block:"start"});
 }));
-
-
-const roles=[
-  {title:"Embedded<br>Systems",sub:"Hardware → firmware → cloud"},
-  {title:"IoT<br>Engineering",sub:"Connected devices → data → action"},
-  {title:"Control<br>Systems",sub:"Telemetry → feedback → decisions"},
-  {title:"Flight<br>Systems",sub:"Sensors → navigation → operator view"}
-];
-let roleIndex=0;
-const roleText=document.getElementById("roleText");
-const roleSubtext=document.getElementById("roleSubtext");
-if(roleText&&roleSubtext){
-  setInterval(()=>{
-    roleText.classList.add("role-changing");
-    setTimeout(()=>{
-      roleIndex=(roleIndex+1)%roles.length;
-      roleText.innerHTML=roles[roleIndex].title;
-      roleSubtext.textContent=roles[roleIndex].sub;
-      roleText.classList.remove("role-changing");
-    },280);
-  },2600);
-}
