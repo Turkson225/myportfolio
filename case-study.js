@@ -1,4 +1,30 @@
 const cases={
+"recovery-ugv":{
+ title:"Autonomous Recovery Assistance UGV",category:"Robotics / AGV",year:"2026",status:"Ongoing mechanical and autonomy prototype",
+ summary:"A mobile robotics prototype exploring autonomous transport assistance for repetitive recovery and material-handling work.",
+ image:"./assets/agv-prototype-hero.webp",fit:"cover",
+ live:null,repo:null,
+ tags:["UGV","Line Following","HuskyLens AI","Sensors","Motor Control","Autonomy"],
+ problem:"Repeated manual movement of recovered components between work areas can consume time and contribute to operator fatigue. The engineering challenge is to automate the transport step without making the surrounding recovery process harder to operate.",
+ approach:"I started with the physical transport problem and built a four-wheel ground-vehicle platform sized for useful payload space. The autonomy direction combines line-following sensors for deterministic route guidance with HuskyLens-based visual recognition and additional proximity sensing. The project is deliberately staged: first prove mechanical mobility and load handling, then integrate navigation, detection, stopping and recovery behaviors.",
+ architecture:[
+  ["LOAD","Recovery components","Place components on the transport platform"],
+  ["GUIDANCE","Line sensors","Follow a defined repeatable route"],
+  ["PERCEPTION","HuskyLens + sensors","Recognize markers and detect route/stop conditions"],
+  ["MOTION","Motor control","Drive, steer, stop and deliver the load"]
+ ],
+ built:["Full-size four-wheel mobile chassis and payload deck","Mechanical frame using aluminium extrusion and sheet/board structure","Autonomy concept combining line following and AI-assisted visual recognition","Development plan for sensor-based stopping, route following and repeatable pickup/drop-off behavior","Human-factors goal focused on reducing repetitive manual carrying and operator fatigue"],
+ hardware:["Four-wheel UGV chassis","Drive motors and wheels","Line-following sensors","HuskyLens AI vision sensor","Motor drivers and controller","Future proximity/obstacle sensing"],
+ software:["Embedded navigation state machine","Line-following control logic","HuskyLens recognition workflow","Motor-control and stop logic","Test/iteration plan for repeatable routes"],
+ validation:[
+  ["CURRENT STATE","Mechanical prototype construction is underway; the project is not presented as a completed autonomous vehicle."],
+  ["HUMAN FACTORS","The design goal is to reduce repetitive carrying and unnecessary walking during recovery/material-handling work."],
+  ["IMPACT ESTIMATE","Preliminary workflow analysis suggests meaningful productivity gains are possible, but the improvement is still a projection until measured in controlled operational trials."],
+  ["NEXT TESTS","Payload handling, route tracking, stopping accuracy, obstacle response, battery endurance and fail-safe behavior still require systematic validation."]
+ ],
+ result:"The project has progressed from an operational pain point to a physical UGV platform with a defined autonomy architecture. It is included in the portfolio as ongoing engineering work, with the distinction between prototype evidence and future performance claims kept explicit.",
+ next:"Complete the drive electronics and controller integration, tune the line-following loop, add HuskyLens recognition and obstacle sensing, then run repeatable timed trials comparing assisted and manual transport workflows."
+},
 "flight-command":{
  title:"Flight Command Center",category:"Flight Systems",year:"2026",status:"Interface milestone / integration ongoing",
  summary:"A fixed-wing flight operations workspace for mission planning, navigation, telemetry, replay, diagnostics and safer system integration.",
@@ -209,14 +235,14 @@ const cases={
 }
 };
 
-const order=["flight-command","smartguard","smart-circuit","space-club","gas-detector","relay-control","flight-deck","turk-innovation"];
+const order=["recovery-ugv","flight-command","smartguard","smart-circuit","space-club","gas-detector","relay-control","flight-deck","turk-innovation"];
 const params=new URLSearchParams(location.search);
 const id=params.get("project")||"flight-command";
 const p=cases[id]||cases["flight-command"];
 const root=document.getElementById("caseStudyRoot");
 const liveTop=document.getElementById("topLiveLink");
 document.title=`${p.title} — Engineering Case Study | Ennis Turkson`;
-liveTop.href=p.live;
+if(p.live){liveTop.href=p.live}else{liveTop.hidden=true;}
 
 const panels=(items,label)=>items.map(x=>`<div class="case-panel"><span>${label}</span><strong>${x}</strong></div>`).join("");
 const arch=p.architecture.map((x,i)=>`<div class="arch-node"><small>0${i+1} / ${x[0]}</small><strong>${x[1]}</strong><p>${x[2]}</p></div>`).join("");
@@ -230,8 +256,8 @@ root.innerHTML=`
     <p class="case-summary">${p.summary}</p>
     <div class="case-tags">${p.tags.map(t=>`<span>${t}</span>`).join("")}</div>
     <div class="case-actions">
-      <a class="primary-button" href="${p.live}" target="_blank" rel="noreferrer">Open Live Project ↗</a>
-      <a class="text-button" href="${p.repo}" target="_blank" rel="noreferrer">GitHub Source ↗</a>
+      ${p.live?`<a class="primary-button" href="${p.live}" target="_blank" rel="noreferrer">Open Live Project ↗</a>`:""}
+      ${p.repo?`<a class="text-button" href="${p.repo}" target="_blank" rel="noreferrer">GitHub Source ↗</a>`:""}
     </div>
   </div>
   <div class="case-hero-media ${p.fit==="contain"?"contain":""}">
@@ -243,7 +269,7 @@ root.innerHTML=`
   <div><span>Status</span><strong>${p.status}</strong></div>
   <div><span>Year</span><strong>${p.year}</strong></div>
   <div><span>Primary domain</span><strong>${p.category}</strong></div>
-  <div><span>Evidence</span><strong>Live project + source</strong></div>
+  <div><span>Evidence</span><strong>${p.live||p.repo?"Live project + source":"Prototype build + case study"}</strong></div>
 </section>
 
 <section class="case-section">
