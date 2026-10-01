@@ -107,3 +107,54 @@ footer{padding:22px max(28px,calc((100vw - 1180px)/2));display:flex;justify-cont
   .section{padding:78px 20px}.skills-list,.technology-groups,.project-grid,.mini-project-grid{grid-template-columns:1fr}.technology-groups article:last-child{grid-column:auto}.resume-card{padding:26px 20px}.resume-top h2{font-size:48px}.experience-row{grid-template-columns:90px 1fr}.lab-grid{grid-template-columns:1fr}.process-line{grid-template-columns:repeat(2,1fr)}.dialog-details{grid-template-columns:1fr}.dialog-image{height:220px}
 }
 @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+
+
+/* Hero portrait motion */
+.hero-photo-wrap{
+  animation:heroFlyIn 1.05s cubic-bezier(.16,1,.3,1) both;
+  transform-origin:center;
+}
+.hero-photo{
+  animation:heroFloat 4.8s ease-in-out 1.1s infinite;
+  will-change:transform;
+}
+.hero-hex{
+  animation:heroHexPulse 4.8s ease-in-out 1.1s infinite;
+}
+.hero-chip{
+  animation:chipFlyIn .75s cubic-bezier(.16,1,.3,1) .72s both;
+}
+
+@keyframes heroFlyIn{
+  0%{
+    opacity:0;
+    transform:translate3d(110px,42px,0) scale(.78) rotate(6deg);
+    filter:blur(8px);
+  }
+  62%{
+    opacity:1;
+    transform:translate3d(-8px,-5px,0) scale(1.025) rotate(-1deg);
+    filter:blur(0);
+  }
+  100%{
+    opacity:1;
+    transform:translate3d(0,0,0) scale(1) rotate(0);
+    filter:blur(0);
+  }
+}
+@keyframes heroFloat{
+  0%,100%{transform:translate3d(0,0,0)}
+  50%{transform:translate3d(0,-10px,0)}
+}
+@keyframes heroHexPulse{
+  0%,100%{transform:scale(1);filter:drop-shadow(0 0 24px rgba(22,201,145,.2))}
+  50%{transform:scale(1.025);filter:drop-shadow(0 0 38px rgba(22,201,145,.3))}
+}
+@keyframes chipFlyIn{
+  0%{opacity:0;transform:translate3d(38px,16px,0) scale(.9)}
+  100%{opacity:1;transform:translate3d(0,0,0) scale(1)}
+}
+
+@media(prefers-reduced-motion:reduce){
+  .hero-photo-wrap,.hero-photo,.hero-hex,.hero-chip{animation:none!important}
+}
