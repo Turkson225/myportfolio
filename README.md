@@ -1,10 +1,10 @@
-# Turkson225 — IoT & Embedded Systems Portfolio
+# Ennis Turkson — Engineering Portfolio
 
 A static, GitHub Pages-ready engineering portfolio covering connected devices, embedded systems, robotics, flight systems, power monitoring, automation and digital products.
 
 ## Featured work
 
-SmartGuard Home Security · Flight Command Center · Flight Deck V1 · Smart Circuit Isolator · ESP32 Gas Detector · ESP32 Relay Control · Turk Robotics · Turk Innovation · InnovateX Engineering Club · Jedi's Store · Turk Electronics.
+SmartGuard Home Security · Flight Command Center · Flight Deck V1 · Smart Circuit Isolator · ESP32 Gas Detector · ESP32 Relay Control · Turk Innovation · InnovateX Engineering Club.
 
 ## GitHub Pages
 
@@ -12,7 +12,7 @@ Enable **Settings → Pages → Deploy from a branch → main → /(root)**.
 
 Expected URL:
 
-https://turkson225.github.io/turk-robotics-website/
+https://turkson225.github.io/myportfolio/
 
 No build step is required. The site uses plain HTML, CSS and JavaScript.
 
