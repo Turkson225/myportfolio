@@ -81,7 +81,7 @@ const cases={
 "smartguard":{
  title:"SmartGuard Home Security",category:"Security / IoT · Client Project",year:"2026",status:"Completed client prototype / next-version integration planned",
  summary:"A three-part intelligent security and automation system combining AI-assisted face recognition, evidence capture, GSM and email alerts, four-channel emergency/appliance control, spreadsheet logging and independent live surveillance.",
- image:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/gsm-security-node.jpg",fit:"cover",
+ image:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smart-control-face.jpg",fit:"cover",
  live:"https://turkson225.github.io/smartguard-dashboard/",repo:"https://github.com/Turkson225/smartguard-dashboard",
  tags:["ESP32-CAM","HuskyLens","SIM800L","4-Channel Relay","Firebase","Apps Script"],
  problem:"The client needed more than a camera or alarm. The system had to identify unknown faces, capture evidence, send alerts through more than one communication path, trigger an emergency/alarm output automatically, control additional appliances, record events for later analysis and still provide live post-alert monitoring.",
@@ -111,7 +111,7 @@ const cases={
  ],
  result:"SmartGuard became a complete client-facing security and automation prototype rather than a single sensing demo. It links perception, evidence, GSM/email notification, automatic emergency triggering, appliance control, event logging and live monitoring while keeping the physical subsystems modular enough to troubleshoot and upgrade independently.",
  next:"The next version will bring the separate live camera more directly into the unified SmartGuard interface, refine enclosure/power integration, strengthen authentication and cloud rules, and continue reliability testing under internet or cellular-network loss."
-}
+},
 "smart-circuit":{
  title:"Smart Circuit Isolator",category:"Power / Monitoring",year:"2026",status:"Working monitoring/control prototype",
  summary:"An ESP32-based electrical monitoring and isolation interface bringing measurement, relay state and protection-oriented visibility into one operations dashboard.",
@@ -370,3 +370,13 @@ ${galleryHtml}
   <div><small>Next case study</small><strong>${nextP.title}</strong></div><b>→</b>
 </a>
 `;
+
+
+document.addEventListener("error",(event)=>{
+  const img=event.target;
+  if(!(img instanceof HTMLImageElement)) return;
+  if(img.dataset.fallbackApplied) return;
+  img.dataset.fallbackApplied="true";
+  img.classList.add("case-image-fallback");
+  img.alt=(img.alt||"Project image")+" — image unavailable";
+},true);
