@@ -1,4 +1,31 @@
 const cases={
+"smart-energy-panel":{
+ title:"Smart Energy Monitoring & Control Panel",category:"Energy / IoT",year:"2026",status:"Completed client prototype",
+ summary:"A custom energy monitoring and control panel designed and constructed for household and small-business use, combining local circuit control, live dashboard monitoring and spreadsheet-based data analysis.",
+ image:"./assets/smart-energy-panel-hero.webp",fit:"cover",
+ live:null,repo:null,
+ tags:["ESP32","Energy Monitoring","4-Channel Control","LCD","Apps Script","Spreadsheet Logging"],
+ problem:"The client needed one practical system for monitoring electrical conditions, controlling several circuits and keeping a record of measured data for later analysis. Off-the-shelf pieces could do parts of this, but not as one integrated panel tailored to the use case.",
+ approach:"I designed the project as a complete panel rather than only a sensor board. The physical layer combines protected circuit channels, electronic control, local status display and an enclosure; the embedded layer acquires electrical data and manages outputs; the browser dashboard provides live monitoring and remote control; and an Apps Script workflow records data into a spreadsheet for historical analysis.",
+ architecture:[
+  ["MEASURE","Energy sensing","Acquire voltage, current, power, energy and related electrical values"],
+  ["CONTROL","ESP32 + relay channels","Process readings and control four output circuits"],
+  ["LOCAL UI","16×2 LCD + panel","Show channel and voltage status directly on the enclosure"],
+  ["DATA / WEB","Dashboard + Apps Script","Remote monitoring/control and spreadsheet logging for analysis"]
+ ],
+ built:["Designed and assembled the complete monitoring/control panel for a client","Integrated four protected output channels into a custom enclosure","Added local LCD status so the system remains understandable without opening the dashboard","Built a browser dashboard for live measurements and four-channel control","Connected recorded data to a spreadsheet using Google Apps Script for later review and analysis","Developed and iterated the physical enclosure, internal wiring layout and electronics packaging"],
+ hardware:["ESP32 controller","Energy metering/sensing hardware","Four control channels and relays","Four miniature circuit breakers","16×2 LCD","Custom 3D-printed enclosure and internal mounting hardware"],
+ software:["Embedded monitoring/control firmware","Responsive web dashboard","Local network device interface","Google Apps Script data logging","Spreadsheet-based historical analysis"],
+ validation:[
+  ["PHYSICAL BUILD","The project progressed through component layout, internal wiring, enclosure assembly and final panel integration."],
+  ["LOCAL STATUS","The LCD displays individual channel state and voltage information directly on the panel."],
+  ["WEB CONTROL","The dashboard presents electrical measurements and independent control for four channels."],
+  ["DATA ANALYSIS","Recorded readings are sent through Apps Script into a spreadsheet so trends and historical values can be reviewed."],
+  ["CLIENT DELIVERY","This was developed as a client project, so the public portfolio keeps client identity and any private deployment details out of the case study."]
+ ],
+ result:"The finished prototype demonstrates an end-to-end energy-management product: physical protection and switching, embedded measurement, local feedback, a web interface and persistent data logging. The real build photos make this one of the clearest examples in the portfolio of taking a system from electronics to a packaged client-facing product.",
+ next:"Future revisions could improve enclosure finish, add stronger authentication and remote access, introduce configurable alerts and thresholds, and build richer historical charts from the logged data."
+},
 "recovery-ugv":{
  title:"Autonomous Recovery Assistance UGV",category:"Robotics / AGV",year:"2026",status:"Ongoing mechanical and autonomy prototype",
  summary:"A mobile robotics prototype exploring autonomous transport assistance for repetitive recovery and material-handling work.",
@@ -235,7 +262,7 @@ const cases={
 }
 };
 
-const order=["recovery-ugv","flight-command","smartguard","smart-circuit","space-club","gas-detector","relay-control","flight-deck","turk-innovation"];
+const order=["smart-energy-panel","recovery-ugv","flight-command","smartguard","smart-circuit","space-club","gas-detector","relay-control","flight-deck","turk-innovation"];
 const params=new URLSearchParams(location.search);
 const id=params.get("project")||"flight-command";
 const p=cases[id]||cases["flight-command"];
