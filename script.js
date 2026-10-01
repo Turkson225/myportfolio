@@ -50,7 +50,9 @@ function openProject(index){
 }
 projectGrid.addEventListener("click",e=>{
   const card=e.target.closest("[data-project]");
-  if(card)openProject(Number(card.dataset.project));
+  if(!card)return;
+  const project=projects[Number(card.dataset.project)];
+  location.href="./case-study.html?project="+encodeURIComponent(project.slug);
 });
 dialogClose.addEventListener("click",()=>dialog.close());
 dialog.addEventListener("click",e=>{if(e.target===dialog)dialog.close()});
