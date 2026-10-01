@@ -8,6 +8,8 @@ SmartGuard Home Security · Flight Command Center · Flight Deck V1 · Smart Cir
 
 The Space Engineering Club project links to https://turkson225.github.io/Turk-Innovation-CLUB/ and uses the branded platform image in `assets/space-engineering-club.webp` for its project card and case-study dialog. The image is contained so the club name and website address remain visible.
 
+Turk Innovation uses the supplied homepage screenshot in `assets/turk-innovation-platform.webp`. Both its project card and case study display the complete screenshot, including the logo and headline.
+
 ## GitHub Pages
 
 Enable **Settings → Pages → Deploy from a branch → main → /(root)**.
