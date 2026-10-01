@@ -79,31 +79,39 @@ const cases={
  next:"Bench-validate the UART transport, sensor calibration and live telemetry path; implement bounded mission transfer and onboard storage; then verify failure cases with the aircraft restrained and propulsion made safe."
 },
 "smartguard":{
- title:"SmartGuard Home Security",category:"Security / IoT",year:"2026",status:"Working prototype / ongoing refinement",
- summary:"A two-system intelligent security and automation architecture combining face recognition, evidence capture, GSM alerts, cloud logging and remote appliance control.",
- image:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg",fit:"cover",
+ title:"SmartGuard Home Security",category:"Security / IoT · Client Project",year:"2026",status:"Completed client prototype / next-version integration planned",
+ summary:"A three-part intelligent security and automation system combining AI-assisted face recognition, evidence capture, GSM and email alerts, four-channel emergency/appliance control, spreadsheet logging and independent live surveillance.",
+ image:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/gsm-security-node.jpg",fit:"cover",
  live:"https://turkson225.github.io/smartguard-dashboard/",repo:"https://github.com/Turkson225/smartguard-dashboard",
- tags:["ESP32-CAM","HuskyLens","SIM800L","Firebase","Apps Script","Relays"],
- problem:"Detection alone is not enough for a useful security system. The operator also needs evidence, notification, fallback communication and a way to understand system status when internet connectivity is unreliable.",
- approach:"I split the design into two coordinated systems: an event/evidence node for recognition and alerts, and a separate ESP32 relay node for alarm/appliance control. GSM remains available as a fallback path while cloud services provide evidence, dashboards and email distribution.",
+ tags:["ESP32-CAM","HuskyLens","SIM800L","4-Channel Relay","Firebase","Apps Script"],
+ problem:"The client needed more than a camera or alarm. The system had to identify unknown faces, capture evidence, send alerts through more than one communication path, trigger an emergency/alarm output automatically, control additional appliances, record events for later analysis and still provide live post-alert monitoring.",
+ approach:"I designed SmartGuard as three coordinated physical subsystems under one operator experience. The first is the intelligent camera/alert panel using ESP32-CAM, HuskyLens and GSM for recognition, evidence and notification. The second is a four-channel relay control panel: channel 1 is automatically triggered by an unknown-face event and can drive an alarm or emergency input, while channels 2–4 remain available for appliance control. The third is a separate live-surveillance camera used for post-alert monitoring. Firebase, spreadsheet/Drive logging, Apps Script email and the unified web dashboard connect the subsystems at the software layer.",
  architecture:[
-  ["PERCEPTION","HuskyLens + ESP32-CAM","Recognize faces and capture event evidence"],
-  ["ALERTING","SIM800L GSM","SMS/call fallback independent of cloud email"],
-  ["CLOUD","Firebase + Google","State, Sheets/Drive evidence and Apps Script email"],
-  ["AUTOMATION","ESP32 + relays","Alarm channel and appliance control"]
+  ["SECURITY NODE","ESP32-CAM + HuskyLens + GSM","Recognize faces, capture evidence and initiate local/cloud alerts"],
+  ["AUTOMATION NODE","ESP32 + 4 relays","Channel 1 emergency/alarm trigger; channels 2–4 appliance control"],
+  ["MONITORING","Dedicated IP camera","Independent live stream for post-alert visual verification"],
+  ["UNIFIED LAYER","Dashboard + cloud + spreadsheet","System status, remote control, evidence, email and event history"]
  ],
- built:["Unknown-face event flow with evidence capture","Cloud logging to Google Sheets/Drive and email notification workflow","GSM SMS/call alert path","Separate four-channel relay controller for alarm and appliances","Web dashboard for device/system state and remote control","Post-alert surveillance workflow with a separate monitoring camera"],
- hardware:["ESP32-CAM — event/evidence capture","HuskyLens — face recognition","SIM800L — GSM SMS/call alerts","ESP32 — relay/automation controller","4-channel relay module"],
- software:["Firebase Realtime Database","Google Sheets and Drive evidence workflow","Google Apps Script email automation","GitHub Pages dashboard","Browser-based device and system status"],
+ built:["Designed and constructed the SmartGuard system as a client project","Unknown-face recognition and evidence-capture workflow","Automatic channel-1 relay activation when an unknown face is detected","Three additional relay channels for appliance control","GSM SMS/call fallback notification path","Email alert containing event information, captured evidence and links back to monitoring resources","Spreadsheet/Google Sheets event logging through Apps Script for later review and analysis","Firebase-backed unified dashboard for status and remote control","Separate live-surveillance camera for post-alert streaming and monitoring","Custom enclosures and packaged electronics for the camera/alert and control subsystems"],
+ hardware:["ESP32-CAM — event/evidence camera","HuskyLens — AI-assisted face recognition","SIM800L — GSM SMS/call communication","ESP32 — automation/control node","4-channel relay module — emergency + appliance outputs","Dedicated IP surveillance camera — live monitoring","Custom enclosures, power and interface hardware"],
+ software:["Firebase Realtime Database","Google Sheets/Drive evidence workflow","Google Apps Script email and logging automation","Unified GitHub Pages dashboard","Browser-based relay/appliance control","Live camera monitoring through the camera application"],
  validation:[
-  ["DETECTION","Observed HuskyLens face-detection distance was approximately 1 m in project testing."],
-  ["RELAY RESPONSE","Observed relay response delays were approximately 2–5 seconds in project tests."],
-  ["NETWORK FALLBACK","Internet-dependent email/Drive/Firebase functions are separated from GSM/manual fallback paths."],
-  ["SYSTEM SPLIT","Security perception/alerting and appliance relay control remain separate nodes rather than one overloaded controller."]
+  ["DETECTION","Observed HuskyLens face-detection distance was approximately 1 m during project testing."],
+  ["AUTOMATIC RESPONSE","Unknown-face detection is linked to relay channel 1 so an alarm/emergency circuit can be triggered without a separate manual command."],
+  ["RELAY RESPONSE","Observed relay response delays were approximately 2–5 seconds during project tests."],
+  ["MULTI-PATH ALERTING","Email/cloud evidence and GSM notification provide separate alert paths rather than relying on one internet-only channel."],
+  ["EVENT RECORD","Captured events are logged to a spreadsheet/evidence workflow for later review and analysis."],
+  ["POST-ALERT MONITORING","A separate surveillance camera provides live visual monitoring after an alert; it is planned to be embedded more tightly into the unified SmartGuard experience in the next version."]
  ],
- result:"SmartGuard demonstrates a complete event chain from perception to evidence, notification and operator response. The modular architecture also makes it easier to diagnose failures and evolve security and automation independently.",
- next:"Improve enclosure/power integration, strengthen authentication and cloud rules, continue reliability testing under network loss, and package the two nodes into a clearer product architecture."
-},
+ gallery:[
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/gsm-security-node.jpg",label:"Security node",caption:"Camera, GSM and control electronics used for perception and alerting."},
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smart-control-face.jpg",label:"Automation panel",caption:"Dedicated SmartGuard control enclosure for the relay/automation subsystem."},
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg",label:"Unified dashboard",caption:"Operator view for system status, security events and remote control."},
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/videos/smartguard-bench-test-poster.jpg",label:"Bench integration",caption:"Development and integration testing of the SmartGuard electronics."}
+ ],
+ result:"SmartGuard became a complete client-facing security and automation prototype rather than a single sensing demo. It links perception, evidence, GSM/email notification, automatic emergency triggering, appliance control, event logging and live monitoring while keeping the physical subsystems modular enough to troubleshoot and upgrade independently.",
+ next:"The next version will bring the separate live camera more directly into the unified SmartGuard interface, refine enclosure/power integration, strengthen authentication and cloud rules, and continue reliability testing under internet or cellular-network loss."
+}
 "smart-circuit":{
  title:"Smart Circuit Isolator",category:"Power / Monitoring",year:"2026",status:"Working monitoring/control prototype",
  summary:"An ESP32-based electrical monitoring and isolation interface bringing measurement, relay state and protection-oriented visibility into one operations dashboard.",
@@ -274,6 +282,20 @@ if(p.live){liveTop.href=p.live}else{liveTop.hidden=true;}
 const panels=(items,label)=>items.map(x=>`<div class="case-panel"><span>${label}</span><strong>${x}</strong></div>`).join("");
 const arch=p.architecture.map((x,i)=>`<div class="arch-node"><small>0${i+1} / ${x[0]}</small><strong>${x[1]}</strong><p>${x[2]}</p></div>`).join("");
 const nextId=order[(order.indexOf(id)+1)%order.length], nextP=cases[nextId];
+const galleryHtml=p.gallery&&p.gallery.length?`
+<section class="case-section">
+  <div class="case-label">06 / Build evidence</div>
+  <div class="case-content">
+    <h2>Real prototype evidence</h2>
+    <p>Selected hardware, interface and bench-test evidence from the actual project build.</p>
+    <div class="evidence-gallery">${p.gallery.map(g=>`
+      <figure class="evidence-card">
+        <img loading="lazy" src="${g.src}" alt="${g.caption}">
+        <figcaption><span>${g.label}</span><strong>${g.caption}</strong></figcaption>
+      </figure>`).join("")}
+    </div>
+  </div>
+</section>`:"";
 
 root.innerHTML=`
 <section class="case-hero">
@@ -330,8 +352,9 @@ root.innerHTML=`
   </div>
 </section>
 
+${galleryHtml}
 <section class="case-section">
-  <div class="case-label">06 / Testing</div>
+  <div class="case-label">${p.gallery?"07":"06"} / Testing</div>
   <div class="case-content">
     <h2>Testing & validation</h2>
     <div class="validation-list">${p.validation.map(v=>`<div class="validation-item"><b>${v[0]}</b><span>${v[1]}</span></div>`).join("")}</div>
@@ -339,7 +362,7 @@ root.innerHTML=`
 </section>
 
 <section class="case-section">
-  <div class="case-label">07 / Result</div>
+  <div class="case-label">${p.gallery?"08":"07"} / Result</div>
   <div class="case-content"><h2>Result & current status</h2><p>${p.result}</p><div class="case-note"><strong>Next engineering iteration:</strong> ${p.next}</div></div>
 </section>
 
