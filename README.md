@@ -4,7 +4,9 @@ A static, GitHub Pages-ready engineering portfolio covering connected devices, e
 
 ## Featured work
 
-SmartGuard Home Security · Flight Command Center · Flight Deck V1 · Smart Circuit Isolator · ESP32 Gas Detector · ESP32 Relay Control · Turk Innovation · InnovateX Engineering Club.
+SmartGuard Home Security · Flight Command Center · Flight Deck V1 · Smart Circuit Isolator · ESP32 Gas Detector · ESP32 Relay Control · Turk Innovation · Space Engineering Club.
+
+The Space Engineering Club project links to https://turkson225.github.io/Turk-Innovation-CLUB/ and uses the branded platform image in `assets/space-engineering-club.webp` for its project card and case-study dialog. The image is contained so the club name and website address remain visible.
 
 ## GitHub Pages
 
