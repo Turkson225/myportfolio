@@ -105,18 +105,18 @@ const cases={
   ["POST-ALERT MONITORING","A separate surveillance camera provides live visual monitoring after an alert; it is planned to be embedded more tightly into the unified SmartGuard experience in the next version."]
  ],
  gallery:[
-  {src:SMARTGUARD_EVIDENCE,label:"Real prototype evidence",caption:"Actual SmartGuard client prototype: camera node, automation panel, integrated monitoring setup and system assembly."},
-  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smart-control-face.jpg",label:"Automation panel",caption:"Dedicated SmartGuard control enclosure for the relay/automation subsystem."},
-  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/smartguard-dashboard.jpg",label:"Unified dashboard",caption:"Operator view for system status, security events and remote control."},
-  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/videos/smartguard-bench-test-poster.jpg",label:"Bench integration",caption:"Development and integration testing of the SmartGuard electronics."}
- ],
+  {src:"./assets/smartguard-system-prototype.jpg",label:"Integrated prototype",caption:"Complete SmartGuard prototype showing the security node, automation panel, connected loads and live-monitoring camera."},
+  {src:"./assets/smartguard-camera-node.jpg",label:"Security camera node",caption:"Camera/alert enclosure development with ESP32-CAM, communication hardware and local battery power."},
+  {src:"./assets/smartguard-relay-control.jpg",label:"Automation node",caption:"ESP32 four-channel relay controller during bench testing with the mobile control dashboard."},
+  {src:"./assets/smartguard-camera-node-2.jpg",label:"Internal assembly",caption:"Second view of the camera/security node enclosure showing component placement and packaging."}
+ ]
  result:"SmartGuard became a complete client-facing security and automation prototype rather than a single sensing demo. It links perception, evidence, GSM/email notification, automatic emergency triggering, appliance control, event logging and live monitoring while keeping the physical subsystems modular enough to troubleshoot and upgrade independently.",
  next:"The next version will bring the separate live camera more directly into the unified SmartGuard interface, refine enclosure/power integration, strengthen authentication and cloud rules, and continue reliability testing under internet or cellular-network loss."
 },
 "smart-circuit":{
  title:"Smart Circuit Isolator",category:"Power / Monitoring",year:"2026",status:"Working monitoring/control prototype",
  summary:"An ESP32-based electrical monitoring and isolation interface bringing measurement, relay state and protection-oriented visibility into one operations dashboard.",
- image:"./assets/smart-circuit-isolator-dashboard.webp",fit:"contain",
+ image:"./assets/smartguard-system-prototype.jpg",fit:"contain",
  live:"https://turkson225.github.io/smart-circuit-isolator-dashboard/",repo:"https://github.com/Turkson225/smart-circuit-isolator-dashboard",
  tags:["ESP32","PZEM-004T","ZMPT101B","ACS712","Relays","Web Dashboard"],
  problem:"Electrical faults and overloads are difficult to interpret when measurements, load state and operator controls are disconnected. A useful system needs observability before it can support safer isolation decisions.",
