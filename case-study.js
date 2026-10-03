@@ -3,7 +3,7 @@ const cases={
 "smart-energy-panel":{
  title:"Smart Energy Monitoring & Control Panel",category:"Energy / IoT",year:"2026",status:"Completed client prototype",
  summary:"A custom energy monitoring and control panel designed and constructed for household and small-business use, combining local circuit control, live dashboard monitoring and spreadsheet-based data analysis.",
- image:"./assets/smart-energy-panel-hero.webp",fit:"cover",
+ image:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/finished-control-enclosure.jpg",fit:"cover",
  live:null,repo:null,
  tags:["ESP32","Energy Monitoring","4-Channel Control","LCD","Apps Script","Spreadsheet Logging"],
  problem:"The client needed one practical system for monitoring electrical conditions, controlling several circuits and keeping a record of measured data for later analysis. Off-the-shelf pieces could do parts of this, but not as one integrated panel tailored to the use case.",
@@ -105,63 +105,10 @@ const cases={
   ["POST-ALERT MONITORING","A separate surveillance camera provides live visual monitoring after an alert; it is planned to be embedded more tightly into the unified SmartGuard experience in the next version."]
  ],
  gallery:[
-  {src:"./assets/smartguard-system-prototype.jpg",label:"Integrated prototype",caption:"Complete SmartGuard prototype showing the security node, automation panel, connected loads and live-monitoring camera."},
-  {src:"./assets/smartguard-camera-node.jpg",label:"Security camera node",caption:"Camera/alert enclosure development with ESP32-CAM, communication hardware and local battery power."},
-  {src:"./assets/smartguard-relay-control.jpg",label:"Automation node",caption:"ESP32 four-channel relay controller during bench testing with the mobile control dashboard."},
-  {src:"./assets/smartguard-camera-node-2.jpg",label:"Internal assembly",caption:"Second view of the camera/security node enclosure showing component placement and packaging."}
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/finished-control-enclosure.jpg",label:"Finished control enclosure",caption:"Real completed energy monitoring and control enclosure used as the primary project evidence."},
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/component-layout.jpg",label:"Internal component layout",caption:"Physical component and wiring layout documenting the embedded build."},
+  {src:"https://raw.githubusercontent.com/Turkson225/turk-innovation/main/public/evidence/energy-panel-dashboard.jpg",label:"Energy dashboard",caption:"Live monitoring interface used alongside the physical panel."}
  ]
- result:"SmartGuard became a complete client-facing security and automation prototype rather than a single sensing demo. It links perception, evidence, GSM/email notification, automatic emergency triggering, appliance control, event logging and live monitoring while keeping the physical subsystems modular enough to troubleshoot and upgrade independently.",
- next:"The next version will bring the separate live camera more directly into the unified SmartGuard interface, refine enclosure/power integration, strengthen authentication and cloud rules, and continue reliability testing under internet or cellular-network loss."
-},
-"smart-circuit":{
- title:"Smart Circuit Isolator",category:"Power / Monitoring",year:"2026",status:"Working monitoring/control prototype",
- summary:"An ESP32-based electrical monitoring and isolation interface bringing measurement, relay state and protection-oriented visibility into one operations dashboard.",
- image:"./assets/smartguard-system-prototype.jpg",fit:"contain",
- live:"https://turkson225.github.io/smart-circuit-isolator-dashboard/",repo:"https://github.com/Turkson225/smart-circuit-isolator-dashboard",
- tags:["ESP32","PZEM-004T","ZMPT101B","ACS712","Relays","Web Dashboard"],
- problem:"Electrical faults and overloads are difficult to interpret when measurements, load state and operator controls are disconnected. A useful system needs observability before it can support safer isolation decisions.",
- approach:"I combined electrical measurement, per-channel sensing, relay state, local alert concepts and a browser operations dashboard. The UI is designed to show device state, safety status and electrical parameters together rather than as unrelated values.",
- architecture:[
-  ["MEASURE","PZEM + voltage/current sensing","Voltage, current, power, energy and related electrical data"],
-  ["EDGE","ESP32","Acquire measurements and coordinate system state"],
-  ["CONTROL","Relay outputs","Switch/isolate connected channels"],
-  ["OPERATOR","Operations dashboard","Status, telemetry, control and protection context"]
- ],
- built:["Operations-style dashboard with device and safety state","Voltage, current, power, energy, frequency and power-factor presentation","Relay/control status and protection-oriented interface","ESP32 measurement/control architecture","Project-specific live GitHub Pages interface"],
- hardware:["ESP32 controller","PZEM-004T energy meter","ZMPT101B voltage sensing","ACS712 current sensing","Relay outputs","Buzzer/local indication in the broader power-monitoring design"],
- software:["Browser dashboard","Local/network telemetry presentation","Control-state interface","GitHub Pages deployment"],
- validation:[
-  ["DASHBOARD","The monitoring/control interface is implemented and published as a working project dashboard."],
-  ["OBSERVABILITY","Electrical values and device/safety state are presented in the same operator view."],
-  ["CONTROL","Relay switching is represented as a separate control layer rather than mixed into measurement logic."],
-  ["DEPLOYMENT BOUNDARY","Hardware protection, isolation ratings and electrical safety compliance require independent validation before any real product deployment."]
- ],
- result:"The project turns a sensor-and-relay prototype into an understandable engineering operations interface. The real dashboard screenshot is now used as portfolio evidence instead of a generic image.",
- next:"Continue electrical calibration, document trip/threshold logic against measured conditions, validate isolation and contactor behavior safely, and separate monitoring features from any safety-critical protection claims."
-},
-"space-club":{
- title:"Space Engineering Club",category:"Engineering Platform",year:"2026",status:"Active web platform",
- summary:"A role-aware engineering community workspace for learning, projects, submissions, direct messaging, events and administration.",
- image:"./assets/space-engineering-club.webp",fit:"contain",
- live:"https://turkson225.github.io/Turk-Innovation-CLUB/",repo:"https://github.com/Turkson225/Turk-Innovation-CLUB",
- tags:["Supabase","Auth","Realtime","PWA","Role Based Access","Messaging"],
- problem:"An engineering community needs more than a landing page. Teachers, members, founders and administrators need structured workflows for courses, projects, communication, submissions, approvals and events.",
- approach:"I treated the platform as an operating system for the club: role-aware navigation, Supabase-backed data, messaging, learning workflows, notifications, project collaboration and mobile-first interaction.",
- architecture:[
-  ["IDENTITY","Auth + roles","Member, teacher, founder, investor and admin access"],
-  ["DATA","Supabase","Structured application and platform data"],
-  ["REALTIME","Messaging + presence","Channels, DMs, notifications and online state"],
-  ["EXPERIENCE","PWA web app","Responsive learning and collaboration workspace"]
- ],
- built:["Role-aware sign-in and navigation","Course and training-track workflows","Teacher review/submission/feedback tools","Channels, threads and WhatsApp-style direct messaging direction","Projects, events, meetings and notifications","Admin approvals, member management, inventory/finance directions and exports","Progressive Web App support and responsive mobile behavior"],
- hardware:["Not a hardware product — this project is an engineering operations platform","Designed to support electronics, robotics, controls, software and AI learning workflows"],
- software:["Supabase database/auth","Realtime messaging/presence concepts","HTML/CSS/JavaScript application","PWA manifest/offline support","GitHub Pages hosting"],
- validation:[
-  ["RESPONSIVE","Desktop and mobile layouts are part of the implemented platform direction."],
-  ["ROLES","Multiple user types are modeled with different responsibilities and views."],
-  ["WORKFLOWS","Courses, submissions, messaging, projects, events and administration are represented as connected workflows."],
-  ["SECURITY WORK","RLS and permission issues encountered during development are treated as implementation work to be hardened, not hidden."]
- ],
  result:"The project shows that my engineering work also includes software systems that organize people, learning and technical projects—not only device dashboards.",
  next:"Continue tightening role permissions/RLS, improve push-notification reliability, refine mobile messaging interaction and move toward a more modular production codebase."
 },
